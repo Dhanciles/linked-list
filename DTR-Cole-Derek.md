@@ -37,22 +37,22 @@
 
 #### Schedule Expectations (When are we available to work together and individually?):
 ##### Derek
-- Weekend:
+- Weekend:  
 
--- Saturday: SkylabFE by noon. Stay still 4. Reassess at 4 for working more at a cafe or over Slack
+  ** Saturday: SkylabFE by noon. Stay still 4. Reassess at 4 for working more at a cafe or over Slack. 
 
--- Sunday: Remote. Be on Slack by noon for a call to check-in and then decide then to work over Slack on call or via Slack text.
+  ** Sunday: Remote. Be on Slack by noon for a call to check-in and then decide then to work over Slack on call or via Slack text.
 
 - Weekday: Staying after school is cool, but leave early and then work from home 
 
 - Lunch: Working is cool. 
 
 ##### Cole
-- Weekend: 
+- Weekend:  
 
--- Saturday: SkylabFE by noon. Stay still 4. Reassess at 4 for working more at a cafe or over Slack
+  ** Saturday: SkylabFE by noon. Stay still 4. Reassess at 4 for working more at a cafe or over Slack  
 
--- Sunday: Remote. Be on Slack by noon for a call to check-in and then decide then to work over Slack on call or via Slack text.
+  ** Sunday: Remote. Be on Slack by noon for a call to check-in and then decide then to work over Slack on call or via Slack text.
 
 - Weekday: Stay til 6.
 
