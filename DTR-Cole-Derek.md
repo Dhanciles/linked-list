@@ -19,13 +19,13 @@
 - Conform to style sheets
 
 #### Team strengths:
-##### Derek
+###### Derek
 - Positivity
 - Prior experience with project
 - GitHub confidence
 - HTML and CSS - Grid and Flexbox
 
-##### Cole
+###### Cole
 - Positivity
 - Comfort with Waffle.io and GitHub
 - HTML and CSS - Grid and Flexbox
@@ -36,23 +36,23 @@
 - Slack text as a last resort
 
 #### Schedule Expectations (When are we available to work together and individually?):
-##### Derek
+###### Derek
 - Weekend:  
 
-  ** Saturday: SkylabFE by noon. Stay still 4. Reassess at 4 for working more at a cafe or over Slack. 
+  * Saturday: SkylabFE by noon. Stay still 4. Reassess at 4 for working more at a cafe or over Slack. 
 
-  ** Sunday: Remote. Be on Slack by noon for a call to check-in and then decide then to work over Slack on call or via Slack text.
+  * Sunday: Remote. Be on Slack by noon for a call to check-in and then decide then to work over Slack on call or via Slack text.
 
 - Weekday: Staying after school is cool, but leave early and then work from home 
 
 - Lunch: Working is cool. 
 
-##### Cole
+###### Cole
 - Weekend:  
 
-  ** Saturday: SkylabFE by noon. Stay still 4. Reassess at 4 for working more at a cafe or over Slack  
+  * Saturday: SkylabFE by noon. Stay still 4. Reassess at 4 for working more at a cafe or over Slack  
 
-  ** Sunday: Remote. Be on Slack by noon for a call to check-in and then decide then to work over Slack on call or via Slack text.
+  * Sunday: Remote. Be on Slack by noon for a call to check-in and then decide then to work over Slack on call or via Slack text.
 
 - Weekday: Stay til 6.
 
