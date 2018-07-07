@@ -3,11 +3,12 @@
   <head> 
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
   </head>
   <body>
     <header>
-      <section>
-        <p>Linked
+      <section class="add-bookmark">
+        <p class="page-title">Linked
           <img class="logo" src="images/linked-list-logo.svg" alt="A white chain link intersecting with grey chainlink, to make site logo.">
         List</p>
         <form>
@@ -17,7 +18,7 @@
           <label>
             <input type="url" placeholder="Website URL" pattern="https://.*" required>
           </label>
-          <button>Enter</button>
+          <button class="submit">Enter</button>
         </form> 
       </section>
     </header>
@@ -25,10 +26,12 @@
       <article>
         <h2>Title</h2>
         <hr>
-        <p>URL</p>
+        <a class="bookmark-url underline" href="">URL</a>
         <hr>
-        <button>Read</button>
-        <button>Delete</button>
+        <div class="bookmark-buttons">
+          <a class="read underline" href="">Read</a>
+          <a class="delete underline" href="">Delete</a>
+        </div>
       </article>
     </main>
   </body>

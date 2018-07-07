@@ -1,0 +1,111 @@
+
+body {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  grid-template-rows: 100vh;   
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  grid-column: 1 / 2; 
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 1rem; 
+  background-color: #455A64;
+  color: #ffffff; 
+}
+
+.add-bookmark {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10rem auto;
+  width: 95%;
+  height: 50%;
+}
+.page-title {
+  font-weight: 800;
+  font-size: 4rem; 
+  text-align: center; 
+  line-height: 4rem; 
+  height: 13%; 
+}
+
+.logo {
+  width: 6rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between;
+  height: 39%; 
+}
+
+section input {
+  width: 100%; 
+
+}
+
+::placeholder {
+  color: #bbbdbf; 
+  font-family: inherit;
+}
+
+.submit {
+  background-color: #ffc107;
+  font-weight: 800; 
+  color: #ffffff;  
+}
+
+.submit:hover {
+  background-color: #ffd773; 
+}
+
+main {
+  grid-column: 2 / 3; 
+  grid-row: 1 / 2; 
+  height: 100%; 
+  background-color: #cfd8dc;
+  padding: 1.5rem; 
+}
+
+article {
+  background-color: #ffffff; 
+  border: 1px solid #607d8b; 
+  padding: 1rem; 
+}
+
+h2 {
+  color: #455a64;
+  font-weight: 800; 
+  /*font-size: */
+}
+
+hr {
+   border: 1px solid #cfd8dc;
+}
+
+a {
+  color: #607d8b;
+}
+
+.underline {
+  border-bottom: 1px solid #f2f4f4;
+  text-decoration: none;  
+}
+
+.bookmark-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%; 
+}
+
+
+
+
+
+
