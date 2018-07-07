@@ -89,7 +89,6 @@ article {
   background-color: #ffffff; 
   border: .1rem solid #607d8b; 
   padding: 1rem 1.2rem .5rem;
-  /*width: 3rem;*/
 }
 
 h2 {
@@ -106,7 +105,12 @@ hr {
 }
 
 a {
-  color: #607d8b;
+  color: #455A64;
+}
+
+a:hover {
+  font-weight: 800; 
+  color: #455A64;
 }
 
 .bookmark-url {
@@ -115,11 +119,22 @@ a {
   margin: .9rem 0 .9rem .2rem;
   font-size: 1.35rem;
   letter-spacing: .03rem;
+  color: #607d8b;
 }
 
 .underline {
   border-bottom: 1px solid #f2f4f4;
   text-decoration: none;  
+}
+
+.underline:hover {
+  border-bottom: 1px solid #ffc107;
+  text-decoration: none; 
+}
+
+.underline:visited {
+  border-bottom: 1px solid #cfd8dc;
+  text-decoration: none; 
 }
 
 .bookmark-buttons {
@@ -129,4 +144,12 @@ a {
   width: 100%; 
   margin: .6rem .2rem 0;
   padding-right: .2rem;
+  color: #455A64;
 }
+
+.read:visited {
+  font-weight: 800; 
+  color: #f05a28;
+  border: none; 
+}
+
