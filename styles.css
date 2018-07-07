@@ -82,19 +82,23 @@ main {
   grid-row: 1 / 2; 
   height: 100%; 
   background-color: #cfd8dc;
-  padding: 1.5rem; 
+  padding: 1.2rem 1.2rem 1.2rem 1.4rem; 
 }
 
 article {
   background-color: #ffffff; 
-  border: 1px solid #607d8b; 
-  padding: 1rem; 
+  border: .1rem solid #607d8b; 
+  padding: 1rem 1.2rem .5rem;
+  /*width: 3rem;*/
 }
 
 h2 {
   color: #455a64;
-  font-weight: 800; 
-  /*font-size: */
+  font-weight: 700; 
+  font-size: 1.75rem;
+  line-height: 1.25rem;
+  letter-spacing: .02rem;
+  margin: 0 0 1rem .2rem;
 }
 
 hr {
@@ -105,6 +109,14 @@ a {
   color: #607d8b;
 }
 
+.bookmark-url {
+  display: inline-block;
+  height: 1.5rem;
+  margin: .9rem 0 .9rem .2rem;
+  font-size: 1.35rem;
+  letter-spacing: .03rem;
+}
+
 .underline {
   border-bottom: 1px solid #f2f4f4;
   text-decoration: none;  
@@ -113,5 +125,8 @@ a {
 .bookmark-buttons {
   display: flex;
   justify-content: space-between;
+  height: 1.2rem;
   width: 100%; 
+  margin: .6rem .2rem 0;
+  padding-right: .2rem;
 }
