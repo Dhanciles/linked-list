@@ -13,7 +13,7 @@ header {
   flex-direction: column;
   justify-content: center;
   height: 100%;
-  padding: 1rem; 
+  padding: 1.1rem 1.1rem 1.1rem 1.3rem; 
   background-color: #455A64;
   color: #ffffff; 
 }
@@ -21,44 +21,56 @@ header {
 .add-bookmark {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 10rem auto;
   width: 95%;
-  height: 50%;
+  height: 60%;
 }
 .page-title {
+  padding-top: 1rem;
   font-weight: 800;
-  font-size: 4rem; 
+  font-size: 3.75rem; 
   text-align: center; 
   line-height: 4rem; 
-  height: 13%; 
+  height: 20%; 
 }
 
 .logo {
-  width: 6rem;
+  height: 3.25rem;
+  margin: 0 .1rem -.2rem -.3rem;
 }
 
 form {
   display: flex;
   flex-direction: column; 
-  justify-content: space-between;
-  height: 39%; 
+  justify-content: space-around;
+  height: 70%; 
 }
 
 section input {
-  width: 100%; 
-
+  width: 100%;
+  border: 2px solid #bbbdbf;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 1.78rem;
+  padding-left: .6rem;
 }
 
 ::placeholder {
   color: #bbbdbf; 
-  font-family: inherit;
+  font-family: 'Open Sans';
+  letter-spacing: .01rem;
 }
 
 .submit {
-  background-color: #ffc107;
-  font-weight: 800; 
-  color: #ffffff;  
+  background-color: #ffc107; 
+  border: 0;
+  height: 2.7rem;
+  line-height: 2.75rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff; 
+  letter-spacing: .02rem;
 }
 
 .submit:hover {
@@ -103,9 +115,3 @@ a {
   justify-content: space-between;
   width: 100%; 
 }
-
-
-
-
-
-
