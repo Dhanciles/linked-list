@@ -1,4 +1,4 @@
-
+/*Applied Throughout Webpage*/
 body {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
@@ -6,6 +6,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+/*Portion of the page where user interacts with page*/
 header {
   grid-column: 1 / 2; 
   grid-row: 1 / 2;
@@ -40,6 +41,7 @@ header {
   margin: 0 .1rem -.2rem -.3rem;
 }
 
+/*Where user inputs information*/
 form {
   display: flex;
   flex-direction: column; 
@@ -77,6 +79,7 @@ section input {
   background-color: #ffd773; 
 }
 
+/*Portion of the page where new bookmarks appear*/
 main {
   grid-column: 2 / 3; 
   grid-row: 1 / 2; 
@@ -85,6 +88,7 @@ main {
   padding: 0 1.2rem 1.2rem 1.4rem; 
 }
 
+/*New bookmarks*/
 article {
   background-color: #ffffff; 
   border: .1rem solid #607d8b; 
@@ -123,34 +127,64 @@ a:hover {
   color: #607d8b;
 }
 
+/*Links styling*/
 .underline {
   border-bottom: 1px solid #f2f4f4;
   text-decoration: none;  
 }
 
 .underline:hover {
-  border-bottom: 1px solid #ffc107;
+  border-bottom: 2px solid #ffc107;
   text-decoration: none; 
 }
 
-.underline:visited {
-  border-bottom: 1px solid #cfd8dc;
-  text-decoration: none; 
-}
-
+/*Read and Delete Buttons*/
 .bookmark-buttons {
   display: flex;
   justify-content: space-between;
   height: 1.2rem;
   width: 100%; 
-  margin: .6rem .2rem 0;
+  margin: .6rem .2rem 0.2rem;
   padding-right: .2rem;
   color: #455A64;
 }
 
-.read:visited {
+button {
+  cursor: pointer; 
+}
+
+div button {
+  border: none; 
+  background-color: none; 
+  font-family: inherit; 
+  font-size: inherit;  
+  color:#455A64; 
+  padding: 0 0 1.25rem 0; 
+}
+
+div button:hover {
+  color:#455A64;
+  font-weight: 800; 
+}
+
+div button:focus {
+  outline: 0;
+}
+
+.read-button .read {
   font-weight: 800; 
   color: #f05a28;
-  border: none; 
+  background-color: #cfd8dc; 
+  border: none;
+  text-decoration: none;  
+}
+
+article .read {
+  background-color: #f2f4f4; 
+}
+
+.bookmark-url .read, .delete-button .read {
+  border-bottom: 1px solid #cfd8dc;
+  text-decoration: none; 
 }
 
