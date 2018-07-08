@@ -16,23 +16,14 @@
             <input class="js-site-title" type="text" placeholder="Website Title">
           </label>
           <label>
-            <input class="js-site-url" type="text" placeholder="Website URL">
+            <input class="js-site-url" type="url" pattern="https://.*" placeholder="Website URL">
           </label>
-          <button class="submit js-submit" type="button">Enter</button>
+          <input class="submit js-submit" type="submit" value="Enter">
         </form> 
       </section>
     </header>
     <main class="js-main">
-      <!-- <article>
-        <h2>The Website Title</h2>
-        <hr>
-        <a class="bookmark-url underline" href="">www.thewebsiteurl.com</a>
-        <hr>
-        <div class="bookmark-buttons">
-          <a class="read underline has-been-read" href="">Read</a>
-          <a class="delete underline" href="">Delete</a>
-        </div>
-      </article> -->
+      <!-- javascript will append new bookmarks here -->
     </main>
     <script src="script.js"></script>
   </body>

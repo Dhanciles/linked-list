@@ -3,14 +3,24 @@ var siteTitle = document.querySelector('.js-site-title');
 var siteUrl = document.querySelector('.js-site-url'); 
 var enter = document.querySelector('.js-submit');
 var main = document.querySelector('.js-main'); 
-var newBookmark = document.createElement('article'); 
 
 // Event Listeners 
-enter.addEventListener('click', addBookmark); 
+enter.addEventListener('click', checkInputs); 
 
-// Functions 
-function addBookmark(event) {
-  event.preventDefault(); 
+// Functions
+function checkInputs(event) {
+  event.preventDefault();
+  if (siteTitle.value === "") {
+    alert('Please enter a website title');
+  } else if (siteUrl.value === "") {
+    alert('Please enter a url beginning with https://');
+  } else {
+    addBookmark();
+  }
+}
+
+function addBookmark() {
+  var newBookmark = document.createElement('article'); 
   var newTitle = siteTitle.value; 
   var newUrl = siteUrl.value;  
   newBookmark.innerHTML = `

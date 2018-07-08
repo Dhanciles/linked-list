@@ -82,13 +82,14 @@ main {
   grid-row: 1 / 2; 
   height: 100%; 
   background-color: #cfd8dc;
-  padding: 1.2rem 1.2rem 1.2rem 1.4rem; 
+  padding: 0 1.2rem 1.2rem 1.4rem; 
 }
 
 article {
   background-color: #ffffff; 
   border: .1rem solid #607d8b; 
   padding: 1rem 1.2rem .5rem;
+  margin: 1.75rem 0;
 }
 
 h2 {
