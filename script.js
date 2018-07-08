@@ -1,22 +1,18 @@
 // Variables 
-var siteTitle = document.querySelector('.site-title'); 
-var siteUrl = document.querySelector('.site-url'); 
-var enter = document.querySelector('.submit');
-var main = document.querySelector('.main'); 
+var siteTitle = document.querySelector('.js-site-title'); 
+var siteUrl = document.querySelector('.js-site-url'); 
+var enter = document.querySelector('.js-submit');
+var main = document.querySelector('.js-main'); 
 var newBookmark = document.createElement('article'); 
 
 // Event Listeners 
 enter.addEventListener('click', addBookmark); 
 
-
 // Functions 
 function addBookmark(event) {
   event.preventDefault(); 
   var newTitle = siteTitle.value; 
-  var newUrl = siteUrl.value;
-  console.log('hello'); 
-  console.log(siteTitle.value);
-  console.log(siteUrl.value);   
+  var newUrl = siteUrl.value;  
   newBookmark.innerHTML = `
         <h2>${newTitle}</h2>
         <hr>
