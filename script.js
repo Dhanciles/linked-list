@@ -5,8 +5,8 @@ var enter = document.querySelector('.js-submit');
 var main = document.querySelector('.js-main'); 
 var readButtons;
 var deleteButtons; 
-var bookmarkUrls;  
-var articles;
+// var bookmarkUrls;  
+// var articles;
 
 // Event Listeners 
 enter.addEventListener('click', checkInputs);
@@ -51,29 +51,31 @@ function clearInput() {
 }
 
 function setNewVariables() {
-  readButtons = document.querySelector('.js-read-button');
-  deleteButtons = document.querySelector('.js-delete-button'); 
-  bookmarkUrls = document.querySelector('.js-bookmark-url');
-  articles = document.querySelector('article');
-  readButtons.addEventListener('click', checkRead);
-  deleteButtons.addEventListener('click', removeCard);
+  readButtons = Array.from(document.querySelectorAll('.js-read-button'));
+  deleteButtons = Array.from(document.querySelectorAll('.js-delete-button')); 
+  setReadEventListeners(readButtons); 
+  setDeleteEventListeners(deleteButtons); 
 }
 
-// How could we update event listeners? When a new article is created does the browser recognize a new instance of an event per card?
-// querySelectorAll or getElementsByClassName? Which is better to use
-// How do you target classList of multiple elements(ref. line 60)
-// Pattern for validating url? Would the pattern attribute come from html or implementation through js?
+function setReadEventListeners(array) {
+  for (var i = 0; i < array.length; i++) {
+    array[i].addEventListener('click', checkRead, true)
+  }
+}
+
+function setDeleteEventListeners(array) {
+  for (var i = 0; i < array.length; i++) {
+    array[i].addEventListener('click', removeCard, true)
+  }
+}
 
 function checkRead(event) {
-  articles.classList.toggle('read');
-  readButtons.classList.toggle('read');
-  deleteButtons.classList.toggle('read');
-  bookmarkUrls.classList.toggle('read');
+  event.currentTarget.closest('main > article').classList.toggle('read'); 
 }
 
 function removeCard(event) {
-  // delete card
-  var eliminate = deleteButtons.closest('article');
-  eliminate.remove('article'); 
+  event.currentTarget.closest('article').remove('article');
 }
+
+// Pattern for validating url? Would the pattern attribute come from html or implementation through js?
 
