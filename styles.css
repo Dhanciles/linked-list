@@ -171,20 +171,18 @@ div button:focus {
   outline: 0;
 }
 
-.read-button .read {
-  font-weight: 800; 
-  color: #f05a28;
-  background-color: #cfd8dc; 
-  border: none;
-  text-decoration: none;  
-}
-
-article .read {
+.read {
   background-color: #f2f4f4; 
 }
 
-.bookmark-url .read, .delete-button .read {
+.read .bookmark-url, .read .delete-button  {
   border-bottom: 1px solid #cfd8dc;
   text-decoration: none; 
 }
 
+.read .read-button {
+  font-weight: 800; 
+  color: #f05a28;
+  border: none;
+  text-decoration: none;  
+}

@@ -3,10 +3,10 @@ var siteTitle = document.querySelector('.js-site-title');
 var siteUrl = document.querySelector('.js-site-url'); 
 var enter = document.querySelector('.js-submit');
 var main = document.querySelector('.js-main'); 
-var readButton;
-var deleteButton; 
-var bookmarkUrl;  
-var article;
+var readButtons;
+var deleteButtons; 
+var bookmarkUrls;  
+var articles;
 
 // Event Listeners 
 enter.addEventListener('click', checkInputs);
@@ -51,12 +51,12 @@ function clearInput() {
 }
 
 function setNewVariables() {
-  readButton = document.querySelector('.js-read-button');
-  deleteButton = document.querySelector('.js-delete-button'); 
-  bookmarkUrl = document.querySelector('.js-bookmark-url');
-  article = document.querySelector('article');
-  readButton.addEventListener('click', checkRead);
-  deleteButton.addEventListener('click', removeCard);
+  readButtons = document.getElementsByClassName('.js-read-button');
+  deleteButtons = document.getElementsByClassName('.js-delete-button'); 
+  bookmarkUrls = document.getElementsByClassName('.js-bookmark-url');
+  articles = document.getElementsByClassName('article');
+  readButtons.addEventListener('click', checkRead);
+  deleteButtons.addEventListener('click', removeCard);
 }
 
 // How could we update event listeners? When a new article is created does the browser recognize a new instance of an event per card?
@@ -65,33 +65,11 @@ function setNewVariables() {
 // Pattern for validating url? Would the pattern attribute come from html or implementation through js?
 
 function checkRead() {
-  // article.classList.contains('.read') ? removeRead() : addRead();
-  
-  // ALTERNATIVE function toggleRead() {
-  // ALTERNATIVE   article.classList.toggle('.read');
-  // ALTERNATIVE   readButton.classList.toggle('.read');
-  // ALTERNATIVE   deleteButton.classList.toggle('.read');
-  // ALTERNATIVE   bookmarkUrl.classList.toggle('.read');
-  // ALTERNATIVE }
+  articles.classList.toggle('read');
+  readButtons.classList.toggle('read');
+  deleteButtons.classList.toggle('read');
+  bookmarkUrls.classList.toggle('read');
 }
-
-function addRead() {
-  // if(event.target.className === 'js-read-button') {
-    article.classList.add('read'); 
-    readButton.classList.add('read'); 
-    deleteButton.classList.add('read');
-    bookmarkUrl.classList.add('read');  
-  }
-// }
-
-function removeRead() {
-  // if(event.target.className === 'js-read-button') {
-    article.classList.remove('read'); 
-    readButton.classList.remove('read'); 
-    deleteButton.classList.remove('read');
-    bookmarkUrl.classList.remove('read');  
-  }
-// }
 
 function removeCard() {
   // delete card
