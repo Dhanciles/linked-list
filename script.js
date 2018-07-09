@@ -51,10 +51,10 @@ function clearInput() {
 }
 
 function setNewVariables() {
-  readButtons = document.getElementsByClassName('.js-read-button');
-  deleteButtons = document.getElementsByClassName('.js-delete-button'); 
-  bookmarkUrls = document.getElementsByClassName('.js-bookmark-url');
-  articles = document.getElementsByClassName('article');
+  readButtons = document.querySelector('.js-read-button');
+  deleteButtons = document.querySelector('.js-delete-button'); 
+  bookmarkUrls = document.querySelector('.js-bookmark-url');
+  articles = document.querySelector('article');
   readButtons.addEventListener('click', checkRead);
   deleteButtons.addEventListener('click', removeCard);
 }
@@ -64,14 +64,16 @@ function setNewVariables() {
 // How do you target classList of multiple elements(ref. line 60)
 // Pattern for validating url? Would the pattern attribute come from html or implementation through js?
 
-function checkRead() {
+function checkRead(event) {
   articles.classList.toggle('read');
   readButtons.classList.toggle('read');
   deleteButtons.classList.toggle('read');
   bookmarkUrls.classList.toggle('read');
 }
 
-function removeCard() {
+function removeCard(event) {
   // delete card
+  var eliminate = deleteButtons.closest('article');
+  eliminate.remove('article'); 
 }
 
