@@ -13,26 +13,18 @@
         List</p>
         <form>
           <label>
-            <input type="text" placeholder="Website Title" required>
+            <input class="js-site-title" type="text" placeholder="Website Title">
           </label>
           <label>
-            <input type="url" placeholder="Website URL" pattern="https://.*" required>
+            <input class="js-site-url" type="url" pattern="https://.*" placeholder="Website URL">
           </label>
-          <button class="submit">Enter</button>
+          <input class="submit js-submit" type="submit" value="Enter">
         </form> 
       </section>
     </header>
-    <main>
-      <article>
-        <h2>The Website Title</h2>
-        <hr>
-        <a class="bookmark-url underline" href="">www.thewebsiteurl.com</a>
-        <hr>
-        <div class="bookmark-buttons">
-          <a class="read underline has-been-read" href="">Read</a>
-          <a class="delete underline" href="">Delete</a>
-        </div>
-      </article>
+    <main class="js-main">
+      <!-- javascript will append new bookmarks here -->
     </main>
+    <script src="script.js"></script>
   </body>
 </html>
