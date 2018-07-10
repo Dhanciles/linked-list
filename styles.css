@@ -2,7 +2,9 @@
 body {
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: 100vh;   
+  grid-template-rows: 100vh;
+  min-height: 23rem;
+  overflow: scroll; 
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -14,7 +16,9 @@ header {
   flex-direction: column;
   justify-content: center;
   height: 100%;
+  min-height: 23rem;
   padding: 1.1rem 1.1rem 1.1rem 1.3rem; 
+  overflow: scroll;
   background-color: #455A64;
   color: #ffffff; 
 }
@@ -26,6 +30,7 @@ header {
   margin: 10rem auto;
   width: 95%;
   height: 60%;
+  min-height: 23rem;
 }
 .page-title {
   padding-top: 1rem;
@@ -49,7 +54,8 @@ form {
   height: 70%; 
 }
 
-section input {
+section 
+input {
   width: 100%;
   border: 2px solid #bbbdbf;
   height: 3rem;
@@ -84,8 +90,10 @@ main {
   grid-column: 2 / 3; 
   grid-row: 1 / 2; 
   height: 100%; 
+  min-height: 23rem;
   background-color: #cfd8dc;
   padding: 0 1.2rem 1.2rem 1.4rem; 
+  overflow: scroll;
 }
 
 /*New bookmarks*/
@@ -153,8 +161,9 @@ button {
   cursor: pointer; 
 }
 
-div button {
-  border: none; 
+div 
+button {
+  border: 0; 
   background-color: none; 
   font-family: inherit; 
   font-size: inherit;  
@@ -162,29 +171,36 @@ div button {
   padding: 0 0 1.25rem 0; 
 }
 
-div button:hover {
+div 
+button:hover {
   color:#455A64;
   font-weight: 800; 
 }
 
-div button:focus {
+div 
+button:focus {
   outline: 0;
 }
 
+/*Read Button Toggle*/
 .read {
   background-color: #f2f4f4; 
 }
 
-.read .bookmark-url, .read .delete-button  {
+.read 
+.bookmark-url, 
+.read 
+.delete-button  {
   border-bottom: 1px solid #cfd8dc;
   text-decoration: none; 
   background-color: #f2f4f4; 
 }
 
-.read .read-button {
+.read 
+.read-button {
   font-weight: 800; 
   color: #f05a28;
-  border: none;
+  border: 0;
   text-decoration: none; 
   background-color: #f2f4f4;  
 }
