@@ -1,27 +1,48 @@
 <!doctype html>
 <html lang="en">
-  <head> 
+  <head>
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,800"
+    >
   </head>
   <body>
     <header>
       <section class="add-bookmark">
         <p class="page-title">
           Linked
-          <img class="logo" src="images/linked-list-logo.svg" alt="A white chain link intersecting with grey chainlink, to make site logo.">
+          <img
+            class="logo"
+            src="images/linked-list-logo.svg"
+            alt="A white chain link intersecting with grey chainlink, to make site logo."
+          >
           List
         </p>
         <form>
           <label>
-            <input class="js-site-title" type="text" placeholder="Website Title">
+            <input
+              class="js-site-title"
+              type="text"
+              placeholder="Website Title"
+            >
           </label>
           <label>
-            <input class="js-site-url" type="url" pattern="https://.*" placeholder="Website URL">
+            <input
+              class="js-site-url"
+              type="url"
+              pattern="https://.*"
+              placeholder="Website URL"
+            >
           </label>
-          <input class="submit js-submit" type="submit" value="Enter">
-        </form> 
+          <input
+            class="js-submit submit"
+            type="submit"
+            value="Enter"
+            disabled
+          >
+        </form>
       </section>
     </header>
     <main class="js-main">

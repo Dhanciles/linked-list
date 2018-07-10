@@ -6,8 +6,14 @@ var main = document.querySelector('.js-main');
 
 // Event Listeners
 enter.addEventListener('click', checkInputs);
+siteTitle.addEventListener('input', enableEnter);
+siteUrl.addEventListener('input', enableEnter);
 
 // Functions
+function enableEnter() {
+  enter.removeAttribute('disabled');
+}
+
 function checkInputs(event) {
   event.preventDefault();
   if (siteTitle.value === '') {
@@ -60,7 +66,7 @@ function setNewVariables() {
 
 function setEventListeners(collection, action) {
   for (var i = 0; i < collection.length; i++) {
-    collection[i].addEventListener('click', action)
+    collection[i].addEventListener('click', action);
   };
 };
 

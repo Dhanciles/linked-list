@@ -1,26 +1,26 @@
 /*Applied Throughout Webpage*/
 body {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); 
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 100vh;
   min-height: 23rem;
-  overflow: scroll; 
+  overflow: scroll;
   font-family: 'Open Sans', sans-serif;
 }
 
 /*Portion of the page where user interacts with page*/
 header {
-  grid-column: 1 / 2; 
+  grid-column: 1 / 2;
   grid-row: 1 / 2;
   display: flex;
   flex-direction: column;
   justify-content: center;
   height: 100%;
   min-height: 23rem;
-  padding: 1.1rem 1.1rem 1.1rem 1.3rem; 
+  padding: 1.1rem 1.1rem 1.1rem 1.3rem;
   overflow: scroll;
   background-color: #455A64;
-  color: #ffffff; 
+  color: #ffffff;
 }
 
 .add-bookmark {
@@ -35,10 +35,10 @@ header {
 .page-title {
   padding-top: 1rem;
   font-weight: 800;
-  font-size: 3.75rem; 
-  text-align: center; 
-  line-height: 4rem; 
-  height: 20%; 
+  font-size: 3.75rem;
+  text-align: center;
+  line-height: 4rem;
+  height: 20%;
 }
 
 .logo {
@@ -49,12 +49,12 @@ header {
 /*Where user inputs information*/
 form {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: space-around;
-  height: 70%; 
+  height: 70%;
 }
 
-section 
+section
 input {
   width: 100%;
   border: 2px solid #bbbdbf;
@@ -65,48 +65,48 @@ input {
 }
 
 ::placeholder {
-  color: #bbbdbf; 
+  color: #bbbdbf;
   font-family: 'Open Sans';
   letter-spacing: .01rem;
 }
 
 .submit {
-  background-color: #ffc107; 
+  background-color: #ffc107;
   border: 0;
   height: 2.7rem;
   line-height: 2.75rem;
   font-size: 1.15rem;
   font-weight: 800;
-  color: #ffffff; 
+  color: #ffffff;
   letter-spacing: .02rem;
 }
 
 .submit:hover {
-  background-color: #ffd773; 
+  background-color: #ffd773;
 }
 
 /*Portion of the page where new bookmarks appear*/
 main {
-  grid-column: 2 / 3; 
-  grid-row: 1 / 2; 
-  height: 100%; 
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  height: 100%;
   min-height: 23rem;
   background-color: #cfd8dc;
-  padding: 0 1.2rem 1.2rem 1.4rem; 
+  padding: 0 1.2rem 1.2rem 1.4rem;
   overflow: scroll;
 }
 
 /*New bookmarks*/
 article {
-  background-color: #ffffff; 
-  border: .1rem solid #607d8b; 
+  background-color: #ffffff;
+  border: .1rem solid #607d8b;
   padding: 1rem 1.2rem .5rem;
   margin: 1.75rem 0;
 }
 
 h2 {
   color: #455a64;
-  font-weight: 700; 
+  font-weight: 700;
   font-size: 1.75rem;
   line-height: 1.25rem;
   letter-spacing: .02rem;
@@ -122,7 +122,7 @@ a {
 }
 
 a:hover {
-  font-weight: 800; 
+  font-weight: 800;
   color: #455A64;
 }
 
@@ -138,12 +138,12 @@ a:hover {
 /*Links styling*/
 .underline {
   border-bottom: 1px solid #f2f4f4;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 .underline:hover {
   border-bottom: 2px solid #ffc107;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 /*Read and Delete Buttons*/
@@ -151,56 +151,56 @@ a:hover {
   display: flex;
   justify-content: space-between;
   height: 1.2rem;
-  width: 100%; 
+  width: 100%;
   margin: .6rem .2rem 0.2rem;
   padding-right: .2rem;
   color: #455A64;
 }
 
 button {
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-div 
+div
 button {
-  border: 0; 
-  background-color: none; 
-  font-family: inherit; 
-  font-size: inherit;  
-  color:#455A64; 
-  padding: 0 0 1.25rem 0; 
+  border: 0;
+  background-color: none;
+  font-family: inherit;
+  font-size: inherit;
+  color:#455A64;
+  padding: 0 0 1.25rem 0;
 }
 
-div 
+div
 button:hover {
   color:#455A64;
-  font-weight: 800; 
+  font-weight: 800;
 }
 
-div 
+div
 button:focus {
   outline: 0;
 }
 
 /*Read Button Toggle*/
 .read {
-  background-color: #f2f4f4; 
+  background-color: #f2f4f4;
 }
 
-.read 
-.bookmark-url, 
-.read 
+.read
+.bookmark-url,
+.read
 .delete-button  {
   border-bottom: 1px solid #cfd8dc;
-  text-decoration: none; 
-  background-color: #f2f4f4; 
+  text-decoration: none;
+  background-color: #f2f4f4;
 }
 
-.read 
+.read
 .read-button {
-  font-weight: 800; 
+  font-weight: 800;
   color: #f05a28;
   border: 0;
-  text-decoration: none; 
-  background-color: #f2f4f4;  
+  text-decoration: none;
+  background-color: #f2f4f4;
 }
