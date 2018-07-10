@@ -1,12 +1,12 @@
-// Variables 
-var siteTitle = document.querySelector('.js-site-title'); 
-var siteUrl = document.querySelector('.js-site-url'); 
+// Variables
+var siteTitle = document.querySelector('.js-site-title');
+var siteUrl = document.querySelector('.js-site-url');
 var enter = document.querySelector('.js-submit');
-var main = document.querySelector('.js-main'); 
+var main = document.querySelector('.js-main');
 var readButtons;
-var deleteButtons; 
+var deleteButtons;
 
-// Event Listeners 
+// Event Listeners
 enter.addEventListener('click', checkInputs);
 
 // Functions
@@ -22,11 +22,11 @@ function checkInputs(event) {
 };
 
 function addBookmark() {
-  var newBookmark = document.createElement('article'); 
-  var newTitle = siteTitle.value; 
-  var newUrl = siteUrl.value;  
+  var newBookmark = document.createElement('article');
+  var newTitle = siteTitle.value;
+  var newUrl = siteUrl.value;
   createCard(newBookmark, newTitle, newUrl);
-  main.appendChild(newBookmark); 
+  main.appendChild(newBookmark);
   clearInput();
   setNewVariables();
 };
@@ -49,31 +49,25 @@ function createCard(newBookmark, newTitle, newUrl) {
 };
 
 function clearInput() {
-  siteTitle.value = ''; 
-  siteUrl.value = ''; 
+  siteTitle.value = '';
+  siteUrl.value = '';
 };
 
 function setNewVariables() {
   readButtons = Array.from(document.querySelectorAll('.js-read-button'));
-  deleteButtons = Array.from(document.querySelectorAll('.js-delete-button')); 
-  setReadEventListeners(readButtons); 
-  setDeleteEventListeners(deleteButtons); 
+  deleteButtons = Array.from(document.querySelectorAll('.js-delete-button'));
+  setEventListeners(readButtons, checkRead);
+  setEventListeners(deleteButtons, removeCard);
 };
 
-function setReadEventListeners(array) {
-  for (var i = 0; i < array.length; i++) {
-    array[i].addEventListener('click', checkRead, true)
-  };
-};
-
-function setDeleteEventListeners(array) {
-  for (var i = 0; i < array.length; i++) {
-    array[i].addEventListener('click', removeCard, true)
+function setEventListeners(collection, action) {
+  for (var i = 0; i < collection.length; i++) {
+    collection[i].addEventListener('click', action, true)
   };
 };
 
 function checkRead(event) {
-  event.currentTarget.closest('main > article').classList.toggle('read'); 
+  event.currentTarget.closest('main > article').classList.toggle('read');
 };
 
 function removeCard(event) {
