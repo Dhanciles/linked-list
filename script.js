@@ -3,8 +3,6 @@ var siteTitle = document.querySelector('.js-site-title');
 var siteUrl = document.querySelector('.js-site-url');
 var enter = document.querySelector('.js-submit');
 var main = document.querySelector('.js-main');
-var readButtons;
-var deleteButtons;
 
 // Event Listeners
 enter.addEventListener('click', checkInputs);
@@ -56,7 +54,7 @@ function clearInput() {
 function setNewVariables() {
   readButtons = Array.from(document.querySelectorAll('.js-read-button'));
   deleteButtons = Array.from(document.querySelectorAll('.js-delete-button'));
-  setEventListeners(readButtons, checkRead);
+  setEventListeners(readButtons, toggleRead);
   setEventListeners(deleteButtons, removeCard);
 };
 
@@ -66,7 +64,7 @@ function setEventListeners(collection, action) {
   };
 };
 
-function checkRead(event) {
+function toggleRead(event) {
   event.currentTarget.closest('main > article').classList.toggle('read');
 };
 
