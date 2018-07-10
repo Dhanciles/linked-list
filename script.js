@@ -6,6 +6,14 @@ var main = document.querySelector('.js-main');
 
 // Event Listeners
 enter.addEventListener('click', checkInputs);
+// document.querySelector('.js-body').addEventListener('click', function(event) {
+//   if (event.target === enter) {
+//     checkInputs();
+//   } else if (event.target === ) {
+
+//   }
+// }
+
 
 // Functions
 function checkInputs(event) {
