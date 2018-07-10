@@ -60,16 +60,16 @@ function setNewVariables() {
 
 function setEventListeners(collection, action) {
   for (var i = 0; i < collection.length; i++) {
-    collection[i].addEventListener('click', action, true)
+    collection[i].addEventListener('click', action)
   };
 };
 
 function toggleRead(event) {
-  event.currentTarget.closest('main > article').classList.toggle('read');
+  event.target.closest('main > article').classList.toggle('read');
 };
 
 function removeCard(event) {
-  event.currentTarget.closest('article').remove('article');
+  event.target.closest('article').remove('article');
 };
 
 // Pattern for validating url? Would the pattern attribute come from html or implementation through js?
