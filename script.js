@@ -14,6 +14,10 @@ function enableEnter() {
   enter.removeAttribute('disabled');
 }
 
+function disableEnter() {
+  enter.setAttribute('disabled', '');
+}
+
 function checkInputs(event) {
   event.preventDefault();
   if (siteTitle.value === '') {
@@ -33,6 +37,7 @@ function addBookmark() {
   main.appendChild(newBookmark);
   clearInput();
   setNewVariables();
+  disableEnter();
 };
 
 function createCard(newBookmark, newTitle, newUrl) {
