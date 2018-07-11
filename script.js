@@ -87,8 +87,8 @@ function createCard(newBookmark, newTitle, newUrl) {
 };
 
 function setNewVariables() {
-  readButtons = Array.from(document.querySelectorAll('.js-read-button'));
-  deleteButtons = Array.from(document.querySelectorAll('.js-delete-button'));
+  var readButtons = Array.from(document.querySelectorAll('.js-read-button'));
+  var deleteButtons = Array.from(document.querySelectorAll('.js-delete-button'));
   setEventListeners(readButtons, toggleRead);
   setEventListeners(deleteButtons, removeCard);
 };
