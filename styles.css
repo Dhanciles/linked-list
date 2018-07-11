@@ -246,3 +246,13 @@ button:focus {
     height: 1.75rem;
   }
 }
+
+@media screen and (min-width: 880px) {
+  .page-title {
+    font-size: 2.75rem;  
+  }
+
+  .logo {
+    height: 2.25rem;
+  }
+}
