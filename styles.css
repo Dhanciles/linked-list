@@ -85,6 +85,10 @@ input {
   background-color: #ffd773;
 }
 
+.submit:disabled {
+  background-color: #bbbdbf;
+}
+
 /*Portion of the page where new bookmarks appear*/
 main {
   grid-column: 2 / 3;
