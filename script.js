@@ -2,7 +2,6 @@
 var siteTitle = document.querySelector('.js-site-title');
 var siteUrl = document.querySelector('.js-site-url');
 var enter = document.querySelector('.js-submit');
-var main = document.querySelector('.js-main');
 
 // Event Listeners
 enter.addEventListener('click', checkInputs);
@@ -10,6 +9,8 @@ siteTitle.addEventListener('input', enableEnter);
 siteUrl.addEventListener('input', enableEnter);
 
 // Functions
+
+// Header section
 function enableEnter() {
   enter.removeAttribute('disabled');
 }
@@ -29,15 +30,43 @@ function checkInputs(event) {
   };
 };
 
+function clearInput() {
+  siteTitle.value = '';
+  siteUrl.value = '';
+};
+
+function updateTotalBookmarks() {
+  var cardCounter = document.querySelectorAll('article').length;
+  var totalBookmarks = document.querySelector('.js-total-bookmarks');
+  totalBookmarks.innerText = `Bookmarks: ${cardCounter}`;
+  updateTotalRead(cardCounter);
+}
+
+function updateTotalRead(cardCounter) {
+  var readCounter = document.querySelectorAll('article.read').length;
+  var totalRead = document.querySelector('.js-total-read');
+  totalRead.innerText = `Read: ${readCounter}`;
+  updateTotalUnread(cardCounter, readCounter);
+}
+
+function updateTotalUnread(cardCounter, readCounter) {
+  var unreadCounter = cardCounter - readCounter;
+  var totalUnread = document.querySelector('.js-total-unread');
+  totalUnread.innerText = `Unread: ${unreadCounter}`;
+}
+
+//Main section
 function addBookmark() {
+  var main = document.querySelector('.js-main');
   var newBookmark = document.createElement('article');
   var newTitle = siteTitle.value;
   var newUrl = siteUrl.value;
   createCard(newBookmark, newTitle, newUrl);
   main.appendChild(newBookmark);
-  clearInput();
   setNewVariables();
+  clearInput();
   disableEnter();
+  updateTotalBookmarks();
 };
 
 function createCard(newBookmark, newTitle, newUrl) {
@@ -57,11 +86,6 @@ function createCard(newBookmark, newTitle, newUrl) {
     </div>`;
 };
 
-function clearInput() {
-  siteTitle.value = '';
-  siteUrl.value = '';
-};
-
 function setNewVariables() {
   readButtons = Array.from(document.querySelectorAll('.js-read-button'));
   deleteButtons = Array.from(document.querySelectorAll('.js-delete-button'));
@@ -77,10 +101,12 @@ function setEventListeners(collection, action) {
 
 function toggleRead(event) {
   event.target.closest('main > article').classList.toggle('read');
+  updateTotalBookmarks();
 };
 
 function removeCard(event) {
   event.target.closest('article').remove('article');
+  updateTotalBookmarks();
 };
 
 // Pattern for validating url? Would the pattern attribute come from html or implementation through js?
