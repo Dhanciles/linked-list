@@ -256,3 +256,30 @@ button:focus {
     height: 2.25rem;
   }
 }
+
+@media screen and (min-width: 1025px) {
+  body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: 100vh;
+  }
+
+  header {
+    height: 100vh;
+  }
+
+  main {
+    grid-column: 2 / 3; 
+    grid-row: 1 / 2; 
+    height: 100%;
+  }
+
+  .add-bookmark {
+    height: 45vh;
+  }
+  
+  form {
+    height: 60%;
+  }
+}
+  
