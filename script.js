@@ -2,11 +2,14 @@
 var siteTitle = document.querySelector('.js-site-title');
 var siteUrl = document.querySelector('.js-site-url');
 var enter = document.querySelector('.js-submit');
+var deleteReadButton = document.querySelector('.js-delete-read'); 
 
 // Event Listeners
 enter.addEventListener('click', checkInputs);
 siteTitle.addEventListener('input', enableEnter);
 siteUrl.addEventListener('input', enableEnter);
+deleteReadButton.addEventListener('click', deleteReadBookmarks);
+// readClass.addEventListener('input', enableDeleteRead);
 
 // Functions
 
@@ -17,6 +20,14 @@ function enableEnter() {
 
 function disableEnter() {
   enter.setAttribute('disabled', '');
+}
+
+function enableDeleteRead() {
+  deleteReadButton.removeAttribute('disabled');
+}
+
+function disablDeleteRead() {
+  deleteReadButton.setAttribute('disabled', '');
 }
 
 function checkInputs(event) {
