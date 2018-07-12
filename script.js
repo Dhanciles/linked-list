@@ -4,7 +4,6 @@ var siteUrl = document.querySelector('.js-site-url');
 var enter = document.querySelector('.js-submit');
 var main = document.querySelector('.js-main');
 var deleteReadButton = document.querySelector('.js-delete-read');
-// var acceptablePattern = '^(?:(?:https?|HTTPS?|ftp|FTP):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))\.?)(?::\d{2,})?(?:[/?#]\S*)?$';
 
 // Event Listeners
 enter.addEventListener('click', checkInputs);
@@ -41,24 +40,6 @@ function checkInputs(event) {
     addBookmark();
   };
 };
-
-// function checkUrlPattern(url) {
-//   var acceptablePattern = '^(?:(?:https?|HTTPS?|ftp|FTP):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))\.?)(?::\d{2,})?(?:[/?#]\S*)?$';
-//   if (url !== acceptablePattern) {
-//     return false;
-//   }
-// };
-
-// function checkInputs(event) {
-//   event.preventDefault();
-//   if (!siteTitle.value) {
-//     alert('Please enter a website title');
-//   } else if (!siteUrl.value || !acceptablePattern) {
-//     alert('Please enter a url beginning with https:// and ending with a TLD. Example: "https://www.google.com" or "https://wwww.turing.io" ');
-//   } else {
-//     addBookmark();
-//   };
-// };
 
 function clearInput() {
   siteTitle.value = '';
@@ -131,7 +112,7 @@ function setEventListeners(collection, action) {
 function toggleRead(event) {
   event.target.closest('main > article').classList.toggle('read');
   updateTotalBookmarks();
-  enableDeleteReadBtn(); 
+  enableDeleteReadBtn();
 };
 
 function removeCard(event) {
@@ -140,10 +121,10 @@ function removeCard(event) {
 };
 
 function deleteReadBookmarks() {
-  var readBookmarks = Array.from(document.querySelectorAll('article.read')); 
+  var readBookmarks = Array.from(document.querySelectorAll('article.read'));
   for (var i = 0; i < readBookmarks.length; i++) {
     readBookmarks[i].remove();
   }
   updateTotalBookmarks();
-  disableDeleteReadBtn();  
+  disableDeleteReadBtn();
 };

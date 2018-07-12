@@ -4,6 +4,7 @@ body {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 100vh;
   min-height: 25rem;
+  min-width: 20rem;
   overflow: scroll;
   font-family: 'Open Sans', sans-serif;
 }
@@ -27,14 +28,13 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: 10rem auto;
+  margin: 9rem auto;
   width: 95%;
-  height: 60%;
-  min-height: 25rem;
+  height: 70%;
+  min-height: 35rem;
 }
 
 .page-title {
-  padding-top: 1rem;
   font-weight: 800;
   font-size: 3.75rem;
   text-align: center;
@@ -53,6 +53,7 @@ form {
   flex-direction: column;
   justify-content: space-around;
   height: 70%;
+  margin-top: 1rem;
 }
 
 section
@@ -94,9 +95,10 @@ input {
 
 /*Bookmark analytics*/
 .bookmark-data {
-  list-style: none;
   display: flex;
   justify-content: space-around;
+  margin: .5rem 0;
+  list-style: none;
   color: #ffffff;
   font-size: 1.25rem;
 }
@@ -111,12 +113,15 @@ button {
   background-color: #ffc107;
   border: 0;
   height: 2.7rem;
-  line-height: 2.75rem;
+  min-height: 2.75rem;
+  padding-bottom: 1rem;
+  margin-top: .5rem;
+  line-height: 2.7rem;
   font-size: 1.15rem;
   font-weight: 800;
   color: #ffffff;
   letter-spacing: .02rem;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 section
@@ -127,7 +132,7 @@ button:hover {
 section
 button:disabled {
   background-color: #bbbdbf;
-  cursor: default; 
+  cursor: default;
 }
 
 /*Portion of the page where new bookmarks appear*/
@@ -310,6 +315,18 @@ button:focus {
     line-height: 2rem;
     font-size: 1rem;
   }
+
+  .bookmark-data {
+    font-size: 1.1rem;
+  }
+
+  section
+  button {
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    min-height: 2rem;
+  }
 }
 
 @media screen and (min-width: 645px) {
@@ -336,15 +353,21 @@ button:focus {
 
   section
   input {
-    height: 3rem;
-    line-height: 3rem;
-    font-size: 1.78rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
   }
 
   .submit {
-    height: 2.7rem;
-    line-height: 2.75rem;
-    font-size: 1.15rem;
+    height: 2.25rem;
+    line-height: 2.25rem;
+    font-size: 1rem;
+  }
+
+  .submit {
+    height: 2.25rem;
+    line-height: 2.25rem;
+    font-size: 1rem;
   }
 }
 
