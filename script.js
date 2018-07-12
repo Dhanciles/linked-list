@@ -22,14 +22,6 @@ function disableEnter() {
   enter.setAttribute('disabled', '');
 };
 
-function enableDeleteReadBtn() {
-  deleteReadButton.removeAttribute('disabled');
-};
-
-function disableDeleteReadBtn() {
-  deleteReadButton.setAttribute('disabled', '');
-};
-
 function checkInputs(event) {
   event.preventDefault();
   if (!siteTitle.value) {
@@ -112,7 +104,16 @@ function setEventListeners(collection, action) {
 function toggleRead(event) {
   event.target.closest('main > article').classList.toggle('read');
   updateTotalBookmarks();
-  enableDeleteReadBtn();
+  toggleDeleteReadBtn();
+};
+
+function toggleDeleteReadBtn() {
+  var readBookmarks = document.querySelectorAll('article.read');
+  if (readBookmarks.length > 0) {
+    deleteReadButton.removeAttribute('disabled');
+  } else {
+    deleteReadButton.setAttribute('disabled', '');
+  };
 };
 
 function removeCard(event) {
@@ -126,5 +127,5 @@ function deleteReadBookmarks() {
     readBookmarks[i].remove();
   }
   updateTotalBookmarks();
-  disableDeleteReadBtn();
+  toggleDeleteReadBtn();
 };
