@@ -34,9 +34,10 @@ function checkInputs(event) {
   event.preventDefault();
   if (!siteTitle.value) {
     alert('Please enter a website title');
-  } else if (!siteUrl.value) {
+  } else if (!siteUrl.value || !siteUrl.validity.valid) {
     alert('Please enter a url beginning with https://');
   } else {
+    debugger; 
     addBookmark();
   };
 };
