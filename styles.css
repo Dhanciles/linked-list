@@ -103,6 +103,28 @@ li {
   display: inline-block;
 }
 
+section
+button {
+  background-color: #ffc107;
+  border: 0;
+  height: 2.7rem;
+  line-height: 2.75rem;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: .02rem;
+}
+
+section
+button:hover {
+  background-color: #ffd773;
+}
+
+section
+button:disabled {
+  background-color: #bbbdbf;
+}
+
 /*Portion of the page where new bookmarks appear*/
 main {
   grid-column: 2 / 3;
