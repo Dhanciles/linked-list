@@ -4,6 +4,7 @@ var siteUrl = document.querySelector('.js-site-url');
 var enter = document.querySelector('.js-submit');
 var main = document.querySelector('.js-main');
 var deleteReadButton = document.querySelector('.js-delete-read');
+// var acceptablePattern = '^(?:(?:https?|HTTPS?|ftp|FTP):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))\.?)(?::\d{2,})?(?:[/?#]\S*)?$';
 
 // Event Listeners
 enter.addEventListener('click', checkInputs);
@@ -16,36 +17,48 @@ deleteReadButton.addEventListener('click', deleteReadBookmarks);
 // Header section
 function enableEnter() {
   enter.removeAttribute('disabled');
-}
+};
 
 function disableEnter() {
   enter.setAttribute('disabled', '');
-}
-
-// function toggleEnter() {
-//   if (siteTitle.value && siteUrl.value) {
-//     enter.disabled = !enter.disabled;
-//   }
-// }
+};
 
 function enableDeleteReadBtn() {
   deleteReadButton.removeAttribute('disabled');
-}
+};
 
 function disableDeleteReadBtn() {
   deleteReadButton.setAttribute('disabled', '');
-}
+};
 
 function checkInputs(event) {
   event.preventDefault();
   if (!siteTitle.value) {
     alert('Please enter a website title');
-  } else if (!siteUrl.value) {
-    alert('Please enter a url beginning with https://');
+  } else if (!siteUrl.value || !siteUrl.validity.valid) {
+    alert('Please enter a url beginning with https:// and ending with a TLD. Example: "https://www.google.com" or "https://wwww.turing.io" ');
   } else {
     addBookmark();
   };
 };
+
+// function checkUrlPattern(url) {
+//   var acceptablePattern = '^(?:(?:https?|HTTPS?|ftp|FTP):\/\/)(?:\S+(?::\S*)?@)?(?:(?!(?:10|127)(?:\.\d{1,3}){3})(?!(?:169\.254|192\.168)(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)(?:\.(?:[a-zA-Z\u00a1-\uffff0-9]-*)*[a-zA-Z\u00a1-\uffff0-9]+)*(?:\.(?:[a-zA-Z\u00a1-\uffff]{2,}))\.?)(?::\d{2,})?(?:[/?#]\S*)?$';
+//   if (url !== acceptablePattern) {
+//     return false;
+//   }
+// };
+
+// function checkInputs(event) {
+//   event.preventDefault();
+//   if (!siteTitle.value) {
+//     alert('Please enter a website title');
+//   } else if (!siteUrl.value || !acceptablePattern) {
+//     alert('Please enter a url beginning with https:// and ending with a TLD. Example: "https://www.google.com" or "https://wwww.turing.io" ');
+//   } else {
+//     addBookmark();
+//   };
+// };
 
 function clearInput() {
   siteTitle.value = '';
@@ -57,20 +70,20 @@ function updateTotalBookmarks() {
   var totalBookmarks = document.querySelector('.js-total-bookmarks');
   totalBookmarks.innerText = `Bookmarks: ${cardCounter}`;
   updateTotalRead(cardCounter);
-}
+};
 
 function updateTotalRead(cardCounter) {
   var readCounter = document.querySelectorAll('article.read').length;
   var totalRead = document.querySelector('.js-total-read');
   totalRead.innerText = `Read: ${readCounter}`;
   updateTotalUnread(cardCounter, readCounter);
-}
+};
 
 function updateTotalUnread(cardCounter, readCounter) {
   var unreadCounter = cardCounter - readCounter;
   var totalUnread = document.querySelector('.js-total-unread');
   totalUnread.innerText = `Unread: ${unreadCounter}`;
-}
+};
 
 //Main section
 function addBookmark() {
@@ -127,14 +140,10 @@ function removeCard(event) {
 };
 
 function deleteReadBookmarks() {
-  var readBookmarks = Array.from(document.querySelectorAll('article.read'));
-  console.log(readBookmarks);  
+  var readBookmarks = Array.from(document.querySelectorAll('article.read')); 
   for (var i = 0; i < readBookmarks.length; i++) {
     readBookmarks[i].remove();
   }
   updateTotalBookmarks();
   disableDeleteReadBtn();  
-}
-
-// Pattern for validating url? Would the pattern attribute come from html or implementation through js?
-
+};

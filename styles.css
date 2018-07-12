@@ -115,6 +115,7 @@ button {
   font-weight: 800;
   color: #ffffff;
   letter-spacing: .02rem;
+  cursor: pointer; 
 }
 
 section
@@ -125,6 +126,7 @@ button:hover {
 section
 button:disabled {
   background-color: #bbbdbf;
+  cursor: default; 
 }
 
 /*Portion of the page where new bookmarks appear*/
