@@ -21,9 +21,9 @@ function disableEnter() {
 
 function checkInputs(event) {
   event.preventDefault();
-  if (siteTitle.value === '') {
+  if (!siteTitle.value) {
     alert('Please enter a website title');
-  } else if (siteUrl.value === '') {
+  } else if (!siteUrl.value) {
     alert('Please enter a url beginning with https://');
   } else {
     addBookmark();
@@ -59,8 +59,8 @@ function updateTotalUnread(cardCounter, readCounter) {
 function addBookmark() {
   var main = document.querySelector('.js-main');
   var newBookmark = document.createElement('article');
-  var newTitle = siteTitle.value;
-  var newUrl = siteUrl.value;
+  var newTitle = siteTitle.value.trim();
+  var newUrl = siteUrl.value.trim();
   createCard(newBookmark, newTitle, newUrl);
   main.appendChild(newBookmark);
   setNewVariables();
