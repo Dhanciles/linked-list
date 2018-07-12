@@ -22,12 +22,6 @@ function disableEnter() {
   enter.setAttribute('disabled', '');
 }
 
-// function toggleEnter() {
-//   if (siteTitle.value && siteUrl.value) {
-//     enter.disabled = !enter.disabled;
-//   }
-// }
-
 function enableDeleteReadBtn() {
   deleteReadButton.removeAttribute('disabled');
 }
@@ -127,14 +121,10 @@ function removeCard(event) {
 };
 
 function deleteReadBookmarks() {
-  var readBookmarks = Array.from(document.querySelectorAll('article.read'));
-  console.log(readBookmarks);  
+  var readBookmarks = Array.from(document.querySelectorAll('article.read')); 
   for (var i = 0; i < readBookmarks.length; i++) {
     readBookmarks[i].remove();
   }
   updateTotalBookmarks();
   disableDeleteReadBtn();  
 }
-
-// Pattern for validating url? Would the pattern attribute come from html or implementation through js?
-
