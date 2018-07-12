@@ -152,6 +152,7 @@ article {
   border: .1rem solid #607d8b;
   padding: 1rem 1.2rem .5rem;
   margin: 1.75rem 0;
+  overflow: hidden;
 }
 
 h2 {
