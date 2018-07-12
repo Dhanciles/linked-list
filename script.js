@@ -75,8 +75,8 @@ function updateTotalUnread(cardCounter, readCounter) {
 //Main section
 function addBookmark() {
   var newBookmark = document.createElement('article');
-  var newTitle = siteTitle.value;
-  var newUrl = siteUrl.value;
+  var newTitle = siteTitle.value.trim();
+  var newUrl = siteUrl.value.trim();
   createCard(newBookmark, newTitle, newUrl);
   main.appendChild(newBookmark);
   setNewVariables();
@@ -103,8 +103,8 @@ function createCard(newBookmark, newTitle, newUrl) {
 };
 
 function setNewVariables() {
-  readButtons = Array.from(document.querySelectorAll('.js-read-button'));
-  deleteButtons = Array.from(document.querySelectorAll('.js-delete-button'));
+  var readButtons = Array.from(document.querySelectorAll('.js-read-button'));
+  var deleteButtons = Array.from(document.querySelectorAll('.js-delete-button'));
   setEventListeners(readButtons, toggleRead);
   setEventListeners(deleteButtons, removeCard);
 };
